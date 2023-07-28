@@ -127,10 +127,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
               contentPadding: const EdgeInsets.only(right: 22, left: 34),
             ),
             SwitchListTile(
-              value: _lactoseFreeFilterSet,
+              value: _veganFilterSet,
               onChanged: (isChecked) {
                 setState(() {
-                  _lactoseFreeFilterSet = isChecked;
+                  _veganFilterSet = isChecked;
                 });
               },
               title: Text(
