@@ -39,7 +39,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     if (identifier == 'filters') {
       await Navigator.of(context).push<Map<Filters, bool>>(
         MaterialPageRoute(
-          builder: (context) => FiltersScreen(),
+          builder: (context) => const FiltersScreen(),
         ),
       );
     }
@@ -55,7 +55,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     var activePageTitle = 'Categories';
 
     if (_selectedPageIndex == 1) {
-      final favoriteMeals = ref.read(favoriteProvider);
+      final favoriteMeals = ref.watch(favoriteMealProvider);
       activePage = MealsScreen(
         meals: favoriteMeals,
       );
